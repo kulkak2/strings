@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    //printf("Hello world");
+    char name[] = "kalyani";
+    int cnt = 0;
+    char a = name[0];
+    while (a != '\0') {
+        cnt++;
+        a = name[cnt] ;
+    }
+    printf("cnt = %d", cnt);
+    len ();
+    return 0;
+}
+
+// Simple :
+
+void len () {
+    char name[] = "kalyani";
+    int i = 0;
+    for (i = 0; name[i] != '\0'; i++) {
+    }
+    printf("\n\nString length = %d", i);
+}
