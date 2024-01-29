@@ -1,0 +1,36 @@
+Example : 1
+
+char p[] = "Hello";
+p = p + 1;  ====> This is wrong. Because array name acts as "const pointer". And we can not change the const.
+p = "Bye"   ====> Rejected
+*p="M"      ====> Works fine. 
+Conclusion : Constant pointer to a String
+i.e. Pointer will remain constant, but string can vary 
+
+######################################################
+
+Example 2:
+char *p = "Hello";
+p = p+1;    ====> Works fine
+p = "Bye"   ====> works fine
+*p = 'M'    ====> Results in coredump
+
+const char* p = "Hello"; ====> Pointer to constat string
+char const* p = "Hello"; ====> same as above
+
+Conclustion: Pointer can change, if string declared as const, then it can not change
+
+
+####################################################
+Example 3:
+Declaring a const pointer :
+char * const p = "Hello";
+ 
+ #include <stdio.h>
+int main()
+{
+    int a = 10, b = 20;
+    int * const ptr = &a;
+    printf("%d", *ptr);
+    return 0;
+}
